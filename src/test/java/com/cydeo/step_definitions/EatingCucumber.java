@@ -5,13 +5,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class EatingCucumber {
-    @Given("John is hungry")
-    public void john_is_hungry() {
-        System.out.println("It is from Given");
+    @Given("{word} is hungry")
+    public void somebody_is_hungry(String name) {
+        System.out.println("It is from Given "+name);
     }
-    @When("he eats some cucumbers")
-    public void he_eats_some_cucumbers() {
-        System.out.println("It is from When");
+    @When("he eats {int} cucumbers")
+    public void he_eats_some_cucumbers(int num) {
+        System.out.println("It is from When "+num);
     }
     @Then("he will be full")
     public void he_will_be_full() {
