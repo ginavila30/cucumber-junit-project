@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 public class LoginStepDefs {
     @Given("user is on log in page")
     public void user_is_on_log_in_page() {
-        System.out.println("librarian is on login page");
+        System.out.println("User is on login page");
     }
     @When("librarian enter valid  username")
     public void librarian_enter_valid_username() {
@@ -43,15 +43,15 @@ public class LoginStepDefs {
 
     @When("admin enter valid  username")
     public void admin_enter_valid_username() {
-        System.out.println("student enters valid username");
+        System.out.println("admin enters valid username");
     }
     @When("admin enter valid  password")
     public void admin_enter_valid_password() {
-        System.out.println("student enters valid password");
+        System.out.println("admin enters valid password");
     }
     @Then("admin should login successfully")
     public void admin_should_login_successfully() {
-        System.out.println("student logs in successfully");
+        System.out.println("admin logs in successfully");
     }
 
 }

@@ -6,7 +6,7 @@ Feature: Library app login feature
   and dashboard should be displayed.
 
   Accounts are: librarian, student, admin
-@librarian @employee @smoke
+@librarian
  Scenario: login with valid librarian credentials
   Given user is on log in page
   When librarian enter valid  username
@@ -14,7 +14,7 @@ Feature: Library app login feature
   Then librarian should login successfully
   And Homepage should be displayed
 
-@student @smoke
+@Student
   Scenario: login with valid student credentials
     Given user is on log in page
     When student enter valid  username
@@ -22,7 +22,7 @@ Feature: Library app login feature
     Then student should login successfully
     And Homepage should be displayed
 
-  @admin
+  @Admin
   Scenario: login with valid admin credentials
     Given user is on log in page
     When admin enter valid  username

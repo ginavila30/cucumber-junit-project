@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
        // plugin ="html:target/cucumber_reports.html" ,
         features= "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        tags = "@student and @smoke",
+        tags = "@Regression and not @Student",
         dryRun = false
 
 )
