@@ -13,6 +13,7 @@ Scenario Outline:  Should be able to add <firstNumber> and <secondNumber>
   |10         |5           |15         |
   |20         |25          |45         |
   |11         |12          |23         |
+  |2          |8           |10         |
 
 
 

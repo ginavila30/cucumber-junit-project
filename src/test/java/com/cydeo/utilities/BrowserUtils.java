@@ -24,7 +24,7 @@ public class BrowserUtils {
     public static void verifyTitle(String expectedTitle){
         Assert.assertTrue(" Title verification failed",Driver.getDriver().getTitle().contains(expectedTitle));
     }
-//Switching to an specific window and verifying title and url is the expected one
+//Switching to a specific window and verifying title and url is the expected one
     public static void switchWindowAndVerify(String expectedUrl,String expectedTitle){
         Set<String> windows=Driver.getDriver().getWindowHandles();
         for (String each:windows) {
