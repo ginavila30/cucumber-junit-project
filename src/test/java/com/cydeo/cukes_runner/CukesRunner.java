@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin ={"pretty","html:target/cucumber_reports.html","json:target/cucumber-report.json","me.jvt.cucumber.report.PrettyReports:target"} ,
         features= "src/test/resources/features",
-        glue = "com/cydeo/step_definitions",
+        glue = "com/cydeo/step_definitions/ui",
         tags = "@dropdown",
         dryRun = false
 )

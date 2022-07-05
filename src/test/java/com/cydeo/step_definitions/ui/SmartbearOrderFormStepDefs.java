@@ -1,4 +1,4 @@
-package com.cydeo.step_definitions;
+package com.cydeo.step_definitions.ui;
 
 import com.cydeo.pages.SmartBearLoginPage;
 import com.cydeo.utilities.ConfigurationReader;

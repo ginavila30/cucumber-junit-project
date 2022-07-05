@@ -1,4 +1,4 @@
-package com.cydeo.step_definitions;
+package com.cydeo.step_definitions.ui;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

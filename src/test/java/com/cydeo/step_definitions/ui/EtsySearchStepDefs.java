@@ -1,4 +1,4 @@
-package com.cydeo.step_definitions;
+package com.cydeo.step_definitions.ui;
 
 import com.cydeo.pages.EtsyPage;
 import com.cydeo.utilities.ConfigurationReader;
