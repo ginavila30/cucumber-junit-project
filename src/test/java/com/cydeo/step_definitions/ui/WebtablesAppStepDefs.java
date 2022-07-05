@@ -1,6 +1,6 @@
 package com.cydeo.step_definitions.ui;
 
-import com.cydeo.pages.CydeoWebTablesAppPage;
+import com.cydeo.pages.CydeoWebTablesAppLoginPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -12,7 +12,7 @@ import org.junit.Assert;
 import java.util.Map;
 
 public class WebtablesAppStepDefs {
-    CydeoWebTablesAppPage obj = new CydeoWebTablesAppPage();
+    CydeoWebTablesAppLoginPage obj = new CydeoWebTablesAppLoginPage();
 
     @Given("User is on web table login page")
     public void user_is_on_web_table_login_page() {

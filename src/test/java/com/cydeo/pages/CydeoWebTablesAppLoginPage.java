@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CydeoWebTablesAppPage {
-    public CydeoWebTablesAppPage(){
+public class CydeoWebTablesAppLoginPage {
+    public CydeoWebTablesAppLoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
