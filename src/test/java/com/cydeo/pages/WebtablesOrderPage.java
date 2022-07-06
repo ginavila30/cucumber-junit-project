@@ -55,6 +55,8 @@ public class WebtablesOrderPage extends BasePage{
     @FindBy(css = "button[type='button']")
     public WebElement calculate;
 
+    //New line
+
 
 
 }
