@@ -31,11 +31,11 @@ public class Hooks {
 
     }
 
-    @AfterStep
-    public void afterStep(Scenario scenario) {
-
-        byte[] stepScreenshots= ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);// casting the driver to take screenshot and storing the screenshot in byte array.
-        scenario.attach(stepScreenshots,"image/png",scenario.getName()); // attaching to my scenario teh screenshot and defining, the screenshot, the location/extensionType, and the name which comes from the scenario name.
-
-    }
+//    @AfterStep
+//    public void afterStep(Scenario scenario) {
+//
+//        byte[] stepScreenshots= ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);// casting the driver to take screenshot and storing the screenshot in byte array.
+//        scenario.attach(stepScreenshots,"image/png",scenario.getName()); // attaching to my scenario teh screenshot and defining, the screenshot, the location/extensionType, and the name which comes from the scenario name.
+//
+//    }
 }
