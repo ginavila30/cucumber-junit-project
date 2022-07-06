@@ -1,3 +1,4 @@
+@webtable_oder_form
 Feature: order form
   User Story: As a user I should be able to fillout order form and process it.
 
@@ -14,3 +15,4 @@ Feature: order form
     And user enters credit card number "1111222233334444"
     And user enters expiry date "12/23"
     And user enters process order button
+    Then Then user should see "Sherlock Holmes" in the table on “View all orders” page

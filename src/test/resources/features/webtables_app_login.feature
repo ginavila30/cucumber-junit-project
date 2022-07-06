@@ -16,7 +16,7 @@ Feature: Login
 
   @webtables_login
   Scenario: map data table practice
-    When User enters below credentials
+    When User enters below credentials webtables
     |username| Test|
     |password| Tester|
     Then User should see url contains word orders

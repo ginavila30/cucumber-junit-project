@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin ={"pretty","html:target/cucumber_reports.html","json:target/cucumber-report.json","me.jvt.cucumber.report.PrettyReports:target"} ,
         features= "src/test/resources/features",
         glue = "com/cydeo/step_definitions/ui",
-        tags = "@dropdown",
+        tags = "@login_nextbase_crm",
         dryRun = false
 )
 public class CukesRunner {

@@ -44,8 +44,8 @@ public class WebtablesAppStepDefs {
         obj.login(username, password);
     }
 
-    @When("User enters below credentials")
-    public void user_enters_below_credentials(Map<String, String> credentials) {
+    @When("User enters below credentials webtables")
+    public void user_enters_below_credentials_webtables(Map<String, String> credentials) {
         obj.usernameInput.sendKeys(credentials.get("username"));
         obj.passwordInput.sendKeys(credentials.get("password"));
         obj.loginBtn.click();
