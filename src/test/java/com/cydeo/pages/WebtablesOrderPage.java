@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class WebtablesOrderPage extends BasePage{
     public  WebtablesOrderPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -55,7 +57,10 @@ public class WebtablesOrderPage extends BasePage{
     @FindBy(css = "button[type='button']")
     public WebElement calculate;
 
-    //New line
+    @FindBy(name = "card")
+    public List<WebElement>cardType;
+
+
 
 
 
