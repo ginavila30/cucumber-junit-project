@@ -56,7 +56,6 @@ public class SmartBearLoginPage {
     public void chooseCreditCard(String cardType) {
         WebElement cardTypeBtn = Driver.getDriver().findElement(By.xpath("//input[@value='"+ cardType + "']"));
         cardTypeBtn.click();
-
     }
 
     @FindBy(id = "ctl00_MainContent_fmwOrder_TextBox6")
