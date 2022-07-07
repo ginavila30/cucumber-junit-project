@@ -1,5 +1,5 @@
 Feature: Calculator should work for simple math
-  As a user I should be able to do simple math
+ User Story:  As a user I should be able to do simple math
 
   Scenario: Should be able to add two numbers
     Given Calculator is open

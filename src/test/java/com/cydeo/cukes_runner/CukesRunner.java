@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin ={"pretty","html:target/cucumber_reports.html","json:target/cucumber-report.json","me.jvt.cucumber.report.PrettyReports:target","rerun:target/rerun.txt"} ,
         features= "src/test/resources/features",
         glue = "com/cydeo/step_definitions/ui",
-        tags = "@google_search",
+        tags = "@example",
         dryRun = false
 )
 public class CukesRunner {
