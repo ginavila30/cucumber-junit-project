@@ -89,8 +89,8 @@ public class WebtablesOrderStepDefs {
        webtableOrderPage.processOrders.click();
     }
 
-    @Then("Then user should see {string} in the table on “View all orders” page")
-    public void thenUserShouldSeeInTheTableOnViewAllOrdersPage(String expectedName) {
+    @Then("user should see {string} in the table on “View all orders” page")
+    public void UserShouldSeeInTheTableOnViewAllOrdersPage(String expectedName) {
         Assert.assertEquals(expectedName,webtablesViewAllOrders.mostRecentOderCustomerName.getText());
     }
 }

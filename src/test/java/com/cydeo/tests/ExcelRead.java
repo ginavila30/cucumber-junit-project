@@ -1,5 +1,6 @@
 package com.cydeo.tests;
 
+import com.cydeo.utilities.ExcelUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
@@ -13,7 +14,7 @@ public class ExcelRead {
     public void read_from_excel_file() throws IOException {
         String path = "SampleData.xlsx";
         FileInputStream file = new FileInputStream(path);
-        //create a workbooj obbject
+        //create a workbook obbject
         XSSFWorkbook  workbook = new XSSFWorkbook(file);
         //get a specific sheet from the workbook
         XSSFSheet sheet = workbook.getSheet("Employees");
@@ -41,6 +42,14 @@ public class ExcelRead {
             }
         }
         file.close();
+    }
+
+    @Test
+    public void practice(){
+        ExcelUtils.setExcelFile("SampleData.xlsx","Employees");
+        System.out.println(ExcelUtils.getCellData(2, 2));
+        ExcelUtils.setCellData("SDET",2,2,"SampleData.xlsx");
+        System.out.println(ExcelUtils.getCellData(2, 2));
     }
 }
 

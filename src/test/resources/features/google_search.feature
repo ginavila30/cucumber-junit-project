@@ -11,7 +11,7 @@ Feature: Google Search
    When User types apple in the google search box and hits enter
    Then User sees apple – Google Search is in the google title
 
- @july2
+ @july2 @google_search
   Scenario: User is able to search whatever and see relevant results
     When User types "apple" in the google search box and hits enter
     Then User sees "apple - Google Search" is in the google title
