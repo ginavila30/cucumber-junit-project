@@ -10,7 +10,7 @@ Feature: Library app login feature
     Given user is on log in page
 
 
-@librarian @employee @smoke
+@librarian @employee
  Scenario: login with valid librarian credentials
   #Given user is on log in page
   When librarian enter valid  username

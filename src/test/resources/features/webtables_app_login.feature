@@ -1,3 +1,4 @@
+@smoke
 Feature: Login
   User Story: as user I should be able to log in and see orders word in the url
   Background:

@@ -10,41 +10,42 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private Driver(){}//no instantiation allowed
-    private static WebDriver driver;
+    //private static WebDriver driver;// Taking this away for parallel testing
+    private  static InheritableThreadLocal<WebDriver> driverPool= new InheritableThreadLocal<>();// creating driver pool object so that parallel testing is possible (multiple threads)
 
     public static WebDriver getDriver(){
-        if(driver==null){
+        if(driverPool.get()==null){
 
             String browserType = ConfigurationReader.getProperty("browser");
             switch (browserType) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driverPool.set(new ChromeDriver());
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+                    driverPool.set(new FirefoxDriver());
 
                     break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver = new SafariDriver();
+                    driverPool.set(new SafariDriver());
 
                     break;
                 default:
                     System.out.println("Unknown Browser Type " + browserType);
             }
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); //trigger when the driver cant find an element. It  gives extra time to do it.if time passes, and it does not find it; it will return exception or empty list.
-            return driver;
+            driverPool.get().manage().window().maximize();
+            driverPool.get().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); //trigger when the driver cant find an element. It  gives extra time to do it.if time passes, and it does not find it; it will return exception or empty list.
+            return driverPool.get();
         }
-        return driver;
+        return driverPool.get();
     }
 
     public static void closeDriver(){
-        if(driver !=null){
-            driver.quit();//This terminates the session
-            driver= null;// reset driver value to null so It can always use only one and the same instance of the object.
+        if(driverPool.get() !=null){
+            driverPool.get().quit();//This terminates the session
+            driverPool.remove();// reset driver value to null so It can always use only one and the same instance of the object.
         }
     }
 }
